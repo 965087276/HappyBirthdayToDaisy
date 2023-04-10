@@ -13,7 +13,7 @@ body {
 }
 .peach {
 	background-color: #FFDAB9;
-	
+
 }
 .peach-after {
 	-webkit-animation:peach_alive linear 8s infinite;
@@ -1080,10 +1080,10 @@ audio {
 	bottom: -200px;
 	opacity: 0.6;
 	z-index: 99;
-	width: 100px;
-	height: 183px;
+	width: 190px;
+	height: 200px;
 	background-repeat: no-repeat no-repeat;
-	background-size: 100px 183px;
+	background-size: 190px 200px;
 }
 .balloons h2 {
 	text-transform: uppercase;
@@ -1353,9 +1353,9 @@ audio {
 	background-position: 10px 10px;
 }
 .pho {
-	-moz-transform:scale(0.5); 
-	-webkit-transform:scale(0.5); 
-	-o-transform:scale(0.5); 
+	-moz-transform:scale(0.5);
+	-webkit-transform:scale(0.5);
+	-o-transform:scale(0.5);
 }
 .dis-none {
 	display: none;
@@ -1386,7 +1386,7 @@ audio {
     }
 
     @media screen and (max-width: 450px) {
-    	
+
 		.balloons {
 			position: fixed;
 			bottom: -200px;
