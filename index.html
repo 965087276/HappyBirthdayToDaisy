@@ -147,7 +147,8 @@
 				<p style="display: block;">赵　　半　　仙</p>
 				<p style="display: block;">小　　迪　　贼</p>
 				<p style="display: block;">小　　天　　才</p>
-				<p style="display: block;">           </p>
+<!-- 				<p style="display: block;">           </p> -->
+				<p id="days-count" style="display: block;"></p>
 				<p style="display: block;">愿   未   来</p>
 				<p style="display: block;">快乐满满，忧伤空空</p>
 				<p style="display: block;">美食满满，脂肪空空</p>
@@ -277,5 +278,23 @@
 		$('#pho2 a').fancyZoom({scaleImg: true, closeOnClick: true});
 	});
 
+</script>
+<script>
+  function calculateDays() {
+    // 设定起始日期（2022年5月19日）
+    let startDate = new Date("2022-05-19");
+    // 获取当前日期
+    let currentDate = new Date();
+    // 计算时间差（以毫秒为单位）
+    let timeDiff = currentDate - startDate;
+    // 转换为天数
+    let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+    // 插入到 HTML 中
+    document.getElementById("days-count").innerText = `我们已相识 ${days} 天`;
+  }
+
+  // 页面加载完成后执行
+  window.onload = calculateDays;
 </script>
 </html>
