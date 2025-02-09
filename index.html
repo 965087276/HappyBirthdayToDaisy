@@ -298,13 +298,6 @@
     } else {
       daysElement.innerText = `我们已相识 ${days} 天`;
     }
-  }
-
-  // 页面加载完成后执行
-  window.onload = calculateDays;
-</script>
-<script>
-  function updateBirthdayAge() {
     // 生日年份（1998年4月23日）
     const birthYear = 1998;
     const birthMonth = 4; // 4月（注意：JavaScript 的月份是 0 开始的，4 表示 5月）
@@ -325,7 +318,8 @@
     document.getElementById("birthday-age").innerText = `${age} 岁 生 日 快 乐 🎂`;
   }
 
-  // 页面加载时执行
-  window.onload = updateBirthdayAge;
+  // 页面加载完成后执行
+  window.onload = calculateDays;
 </script>
+
 </html>
