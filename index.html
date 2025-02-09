@@ -144,7 +144,6 @@
 				<p style="display: block;">小　　　　  赵</p>
 				<p style="display: block;">妹　　　　  妹</p>
 				<p style="display: block;">赵　　小　　仙</p>
-				<p style="display: block;">赵　　半　　仙</p>
 				<p style="display: block;">小　　迪　　贼</p>
 				<p style="display: block;">小　　天　　才</p>
 <!-- 				<p style="display: block;">           </p> -->
@@ -290,8 +289,15 @@
     // 转换为天数
     let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
-    // 插入到 HTML 中
-    document.getElementById("days-count").innerText = `我们已相识 ${days} 天`;
+    // 获取显示天数的元素
+    let daysElement = document.getElementById("days-count");
+
+    // 判断是否达到 1000 天
+    if (days === 998) {
+      daysElement.innerHTML = `我们已相识 <span style="font-size: 2em; font-weight: bold; color: red; font-family: 'Arial Black', sans-serif;">1000</span> 天 🎉`;
+    } else {
+      daysElement.innerText = `我们已相识 ${days} 天`;
+    }
   }
 
   // 页面加载完成后执行
