@@ -139,7 +139,7 @@
 		</div>
 		<div class="row message">
 			<div class="col-md-12">
-				<p style="display: block;">27 岁 生 日 快 乐</p>
+				<p id="birthday-age" style="display: block;"></p>
 				<p style="display: block;">D  A  I  S  Y </p>
 				<p style="display: block;">小　　　　  赵</p>
 				<p style="display: block;">妹　　　　  妹</p>
@@ -302,5 +302,30 @@
 
   // 页面加载完成后执行
   window.onload = calculateDays;
+</script>
+<script>
+  function updateBirthdayAge() {
+    // 生日年份（1998年4月23日）
+    const birthYear = 1998;
+    const birthMonth = 4; // 4月（注意：JavaScript 的月份是 0 开始的，4 表示 5月）
+    const birthDay = 23;
+
+    // 获取当前日期
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const birthdayThisYear = new Date(currentYear, birthMonth - 1, birthDay); // 今年的生日
+
+    // 计算岁数
+    let age = currentYear - birthYear;
+    if (today < birthdayThisYear) {
+      age--; // 生日还没到，减去 1 岁
+    }
+
+    // 更新 HTML
+    document.getElementById("birthday-age").innerText = `${age} 岁 生 日 快 乐 🎉`;
+  }
+
+  // 页面加载时执行
+  window.onload = updateBirthdayAge;
 </script>
 </html>
