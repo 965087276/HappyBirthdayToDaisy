@@ -287,7 +287,7 @@
     // 计算时间差（以毫秒为单位）
     let timeDiff = currentDate - startDate;
     // 转换为天数
-    let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) + 1;
 
     // 获取显示天数的元素
     let daysElement = document.getElementById("days-count");
