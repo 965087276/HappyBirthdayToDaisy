@@ -293,7 +293,7 @@
     let daysElement = document.getElementById("days-count");
 
     // 判断是否达到 1000 天
-    if (days === 1000) {
+    if (days === 1000 || days == 1001) {
       daysElement.innerHTML = `我们已相识 <span style="font-size: 2em; font-weight: bold; color: red; font-family: 'Arial Black', sans-serif;">1000</span> 天 🎉`;
     } else {
       daysElement.innerText = `我们已相识 ${days} 天`;
